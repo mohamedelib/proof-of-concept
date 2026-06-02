@@ -1,0 +1,122 @@
+{% render 'partials/head.liquid', title: 'Dashboard' %}
+
+<body>
+
+    <header class="upperheader">
+        <picture>
+            <source srcset="/assets/tweakers.avif" type="image/avif">
+            <source srcset="/assets/tweakers.webp" type="image/webp">
+            <img src="/assets/tweakers.jpg" width="{{ 150 }}" height="{{ 50 }}" alt="{{ Tweakers }}"
+                fetchpriority="high">
+        </picture>
+        <img src="/assets/burger-menu.svg" width="50" height="40">
+        <nav>
+            <ol>
+                <li>Overzicht</li>
+                <li>Topics</li>
+                <li>Gebruikers</li>
+                <li>Meldingen</li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <article class="actieve-topics">
+            <h2>Meest actieve topics</h2>
+            <ol>
+                <li>
+                    <a href="#">Computers</a>
+                </li>
+                <li>
+                    <a href="#">Games</a>
+                </li>
+                <li>
+                    <a href="#">Tablets en Telefoons</a>
+                </li>
+                <li>
+                    <a href="#">Wonen en mobiliteit</a>
+                </li>
+                <li>
+                    <a href="#">Beeld en geluid</a>
+                </li>
+            </ol>
+
+        </article>
+        <article class="top-gebruikers">
+            <h2>Top gebruikers</h2>
+            <ul>
+                <li>
+                    <article>
+                        <h3>Kees</h3>
+                        <figcaption>lid sinds 2012</figcaption>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3>Piet</h3>
+                        <figcaption>lid sinds 2026</figcaption>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3>Haas</h3>
+                        <figcaption>lid sinds 2018</figcaption>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3>Gerda</h3>
+                        <figcaption>lid sinds 2021</figcaption>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3>Tom</h3>
+                        <figcaption>lid sinds 2008</figcaption>
+                    </article>
+                </li>
+            </ul>
+
+        </article>
+        <article class="nieuwe-posts">
+            <h2>Nieuwe posts vandaag</h2>
+            <p>1284</p>
+
+
+        </article>
+        <article class="actieve-cats">
+            <h2>Meest actieve categorieen</h2>
+            <ol>
+                <li>
+                    <a href="#">Nieuwe RTX 5090 - Benchmarks</a>
+                    <data value="612">612 reacties</data>
+                </li>
+                <li>
+                    <a href="#">Beste budget telefoon van 2026</a>
+                    <data value="612">612 reacties</data>
+                </li>
+                <li>
+                    <a href="#">Glasvezel vs kabel - Wat kies jij?</a>
+                </li>
+                <li>
+                    <a href="#">Zelfbouw pc onderdelen</a>
+                </li>
+                <li>
+                    <a href="#">Linux op de desktop</a>
+                </li>
+            </ol>
+        </article>
+        <article class="activiteit">
+            <h2> Activiteit</h2>
+            <p>Posts * 7dagen</p>
+
+        </article>
+        <article class="meldingen">
+
+        </article>
+        <article class="nieuweleden">
+
+        </article>
+    </main>
+
+
+</body>
