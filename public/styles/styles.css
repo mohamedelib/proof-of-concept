@@ -1,0 +1,54 @@
+.upperheader {
+  display: flex;
+  justify-content: space-between;
+
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  nav[popover] {
+    inset: 0 0 0 auto;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-brand);
+    color: white;
+    border: none;
+    padding: 70px 0 30px 2vw;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 2rem;
+      color: white;
+      padding: 10px;
+      position: absolute;
+      top: 3px;
+      right: 15px;
+
+      &:hover {
+        color: var(--color-logo);
+      }
+    }
+
+    a {
+      display: block;
+      padding: 20px;
+      font-size: 1.25rem;
+      color: inherit;
+      text-decoration: none;
+      margin-bottom: 30px;
+
+      &:hover {
+        color: var(--color-logo);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--color-logo);
+      }
+    }
+  }
+}

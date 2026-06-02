@@ -9,13 +9,16 @@
             <img src="/assets/tweakers.jpg" width="{{ 150 }}" height="{{ 50 }}" alt="{{ Tweakers }}"
                 fetchpriority="high">
         </picture>
-        <img src="/assets/burger-menu.svg" width="50" height="40" alt="menu">
-        <nav>
+        <button class="hamburger" popovertarget="hamburger">
+            <img src="/assets/burger-menu.svg" width="50" height="40" alt="menu">
+        </button>
+        <nav id="hamburger" popover>
+            <button type="button" popovertarget="hamburger" aria-label="menu sluiten">✕</button>
             <ol>
-                <li>Overzicht</li>
-                <li>Topics</li>
-                <li>Gebruikers</li>
-                <li>Meldingen</li>
+                <li><a href="#">Overzicht</a></li>
+                <li><a href="#">Topics</a></li>
+                <li><a href="#">Gebruikers</a></li>
+                <li><a href="#">Meldingen</a></li>
             </ol>
         </nav>
     </header>
