@@ -50,6 +50,11 @@
     font-size: 18px;
   }
 
+  li,
+  a {
+    list-style: none;
+  }
+
   /*  Radius + beweging */
   --radius-md: 8px;
   --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
