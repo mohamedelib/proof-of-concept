@@ -2,7 +2,12 @@
     Tweakers Community Dashboard
   ========================================================= */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600&display=swap");
-
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
 :root {
   /* --- Merkkleuren --- */
   --color-logo: #d9e54d; /* lime  */
