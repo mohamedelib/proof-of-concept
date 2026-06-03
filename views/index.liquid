@@ -6,13 +6,7 @@
     <picture>
       <source srcset="/assets/tweakers.avif" type="image/avif">
       <source srcset="/assets/tweakers.webp" type="image/webp">
-      <img
-        src="/assets/tweakers.jpg"
-        width="{{ 180 }}"
-        height="{{ 50 }}"
-        alt="{{ Tweakers }}"
-        fetchpriority="high"
-      >
+      <img src="/assets/tweakers.jpg" width="{{ 180 }}" height="{{ 50 }}" alt="{{ Tweakers }}" fetchpriority="high">
     </picture>
     <button class="hamburger" popovertarget="hamburger">
       <img src="/assets/burger-menu.svg" width="50" height="40" alt="menu">
@@ -35,32 +29,13 @@
       <section class="active-topics card">
         <h2>Most active topics</h2>
         <table>
+          {% for item in items %}
           <tr>
-            <td>1</td>
-            <td><a href="">Nieuwe RTX 5090 - Benchmarks </a></td>
-            <td class="number">612</td>
+            <td>{{ forloop.index }}</td>
+            <td><a href="{{ item.link }}">{{ item.title }}</a></td>
+            <td class="number">{{ item.replies }}</td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="">Beste budget telefoon van 2026</a></td>
-            <td class="number">612</td>
-          </tr>
-
-          <tr>
-            <td>3</td>
-            <td><a href="">Beste budget telefoon van 2026</a></td>
-            <td class="number">612</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td><a href="">Beste budget telefoon van 2026</a></td>
-            <td class="number">612</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td><a href="">Beste budget telefoon van 2026</a></td>
-            <td class="number">612</td>
-          </tr>
+          {% endfor %}
         </table>
       </section>
       <section class="top-gebruikers card">
@@ -106,32 +81,13 @@
       <section class="active-cats card">
         <h2>Most active cats</h2>
         <table>
+          {% for categorie in categorieen %}
           <tr>
-            <td>1</td>
-            <td><a href="">Computers </a></td>
-            <td class="number">612</td>
+            <td>{{ forloop.index }}</td>
+            <td><a href="{{ categorie.link }}">{{ categorie.naam }} </a></td>
+            <td class="number">{{ categorie.totaalReacties }}</td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="">Games</a></td>
-            <td class="number">612</td>
-          </tr>
-
-          <tr>
-            <td>3</td>
-            <td><a href="">Tablets en Telefoons</a></td>
-            <td class="number">612</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td><a href="">Wonen en mobiliteit</a></td>
-            <td class="number">612</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td><a href="">Beeld en geluid</a></td>
-            <td class="number">612</td>
-          </tr>
+          {% endfor %}
         </table>
       </section>
 
