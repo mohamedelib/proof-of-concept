@@ -5,6 +5,7 @@ import express from "express";
 //  Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from "liquidjs";
 
+import { parseFeed } from 'feedsmith'
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express();
 
