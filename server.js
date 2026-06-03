@@ -5,7 +5,9 @@ import express from "express";
 //  Importeer de Liquid package (ook als dependency via npm geïnstalleerd)
 import { Liquid } from "liquidjs";
 
-import { parseFeed } from 'feedsmith'
+// Importeer feedsmith om RSS-feeds te kunnen uitlezen
+import { parseFeed } from "feedsmith";
+
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express();
 
@@ -21,9 +23,57 @@ app.set("views", "./views");
 // Zorg dat werken met request data makkelijker wordt
 app.use(express.urlencoded({ extended: true }));
 
-// GET routes: 
+// GET routes:
+// GET routes:
 app.get("/", async function (request, response) {
-  response.render("index.liquid");
+  const categorieen = [7, 4, 127, 100, 32, 9, 41];
+
+  const teksten = await Promise.all(
+    categorieen.map(function (categorie) {
+      return fetch(
+        "https://gathering.tweakers.net/rss/list_topics/" + categorie,
+      ).then(function (res) {
+        return res.text();
+      });
+    }),
+  );
+
+  const items = [];
+  const categorieStats = [];
+
+  for (const xml of teksten) {
+    const { feed } = parseFeed(xml);
+
+    let totaalReacties = 0;
+    for (const item of feed.items) {
+      const replies = Number(
+        item.description.substring(9, item.description.indexOf("\n")),
+      );
+      items.push({ title: item.title, link: item.link, replies: replies });
+      totaalReacties += replies;
+    }
+
+    categorieStats.push({
+      naam: feed.title, // naam van de categorie
+      aantalTopics: feed.items.length,
+      totaalReacties: totaalReacties,
+    });
+  }
+
+  // Sorteer aflopend op aantal reacties en pak de top 5 topics
+  items.sort(function (a, b) {
+    return b.replies - a.replies;
+  });
+
+  // Sorteer categorieën aflopend op totaal aantal reacties
+  categorieStats.sort(function (a, b) {
+    return b.totaalReacties - a.totaalReacties;
+  });
+
+  response.render("index.liquid", {
+    items: items.slice(0, 5),
+    categorieen: categorieStats.slice(0, 5),
+  });
 });
 
 // POST routes: /
