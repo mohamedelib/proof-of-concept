@@ -1,129 +1,152 @@
 {% render 'partials/head.liquid', title: 'Dashboard' %}
 
 <body>
+  {% comment %} header {% endcomment %}
+  <header class="upperheader">
+    <picture>
+      <source srcset="/assets/tweakers.avif" type="image/avif">
+      <source srcset="/assets/tweakers.webp" type="image/webp">
+      <img
+        src="/assets/tweakers.jpg"
+        width="{{ 180 }}"
+        height="{{ 50 }}"
+        alt="{{ Tweakers }}"
+        fetchpriority="high"
+      >
+    </picture>
+    <button class="hamburger" popovertarget="hamburger">
+      <img src="/assets/burger-menu.svg" width="50" height="40" alt="menu">
+    </button>
+    <nav id="hamburger" popover>
+      <button type="button" popovertarget="hamburger" aria-label="menu sluiten">✕</button>
+      <ol>
+        <li><a href="#">Overzicht</a></li>
+        <li><a href="#">Topics</a></li>
+        <li><a href="#">Gebruikers</a></li>
+        <li><a href="#">Meldingen</a></li>
+      </ol>
+    </nav>
+  </header>
 
-    <header class="upperheader">
-        <picture>
-            <source srcset="/assets/tweakers.avif" type="image/avif">
-            <source srcset="/assets/tweakers.webp" type="image/webp">
-            <img src="/assets/tweakers.jpg" width="{{ 150 }}" height="{{ 50 }}" alt="{{ Tweakers }}"
-                fetchpriority="high">
-        </picture>
-        <button class="hamburger" popovertarget="hamburger">
-            <img src="/assets/burger-menu.svg" width="50" height="40" alt="menu">
-        </button>
-        <nav id="hamburger" popover>
-            <button type="button" popovertarget="hamburger" aria-label="menu sluiten">✕</button>
-            <ol>
-                <li><a href="#">Overzicht</a></li>
-                <li><a href="#">Topics</a></li>
-                <li><a href="#">Gebruikers</a></li>
-                <li><a href="#">Meldingen</a></li>
-            </ol>
-        </nav>
-    </header>
-    <main>
-        <h1>Welkom Communitymanager!</h1>
-        <article class="actieve-topics">
-            <h2>Meest actieve topics</h2>
-            <ol>
-                <li>
-                    <a href="#">Computers</a>
-                </li>
-                <li>
-                    <a href="#">Games</a>
-                </li>
-                <li>
-                    <a href="#">Tablets en Telefoons</a>
-                </li>
-                <li>
-                    <a href="#">Wonen en mobiliteit</a>
-                </li>
-                <li>
-                    <a href="#">Beeld en geluid</a>
-                </li>
-            </ol>
+  {% comment %} einde header {% endcomment %}
+  <main>
+    <h1>Welkom Communitymanager!</h1>
+    <div class="maincontainer">
+      <section class="active-topics card">
+        <h2>Most active topics</h2>
+        <table>
+          <tr>
+            <td>1</td>
+            <td><a href="">Nieuwe RTX 5090 - Benchmarks </a></td>
+            <td class="number">612</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="">Beste budget telefoon van 2026</a></td>
+            <td class="number">612</td>
+          </tr>
 
-        </article>
-        <article class="top-gebruikers">
-            <h2>Top gebruikers</h2>
-            <ul>
-                <li>
-                    <article>
-                        <h3>Kees</h3>
-                        <p>lid sinds 2012</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Piet</h3>
-                        <p>lid sinds 2026</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Haas</h3>
-                        <p>lid sinds 2018</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Gerda</h3>
-                        <p>lid sinds 2021</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h3>Tom</h3>
-                        <p>lid sinds 2008</p>
-                    </article>
-                </li>
-            </ul>
+          <tr>
+            <td>3</td>
+            <td><a href="">Beste budget telefoon van 2026</a></td>
+            <td class="number">612</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><a href="">Beste budget telefoon van 2026</a></td>
+            <td class="number">612</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><a href="">Beste budget telefoon van 2026</a></td>
+            <td class="number">612</td>
+          </tr>
+        </table>
+      </section>
+      <section class="top-gebruikers card">
+        <h2>Top gebruikers</h2>
+        <ul>
+          <li>
+            <article>
+              <h3>Kees</h3>
+              <p>lid sinds 2012</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Piet</h3>
+              <p>lid sinds 2026</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Haas</h3>
+              <p>lid sinds 2018</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Gerda</h3>
+              <p>lid sinds 2021</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Tom</h3>
+              <p>lid sinds 2008</p>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section class="nieuwe-posts card">
+        <h2>Nieuwe posts vandaag</h2>
+        <p>1284</p>
+      </section>
 
-        </article>
-        <article class="nieuwe-posts">
-            <h2>Nieuwe posts vandaag</h2>
-            <p>1284</p>
+      <section class="active-cats card">
+        <h2>Most active cats</h2>
+        <table>
+          <tr>
+            <td>1</td>
+            <td><a href="">Computers </a></td>
+            <td class="number">612</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="">Games</a></td>
+            <td class="number">612</td>
+          </tr>
 
+          <tr>
+            <td>3</td>
+            <td><a href="">Tablets en Telefoons</a></td>
+            <td class="number">612</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><a href="">Wonen en mobiliteit</a></td>
+            <td class="number">612</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><a href="">Beeld en geluid</a></td>
+            <td class="number">612</td>
+          </tr>
+        </table>
+      </section>
 
-        </article>
-        <article class="actieve-cats">
-            <h2>Meest actieve categorieen</h2>
-            <ol>
-                <li>
-                    <a href="#">Nieuwe RTX 5090 - Benchmarks</a>
-                    <data value="612">612 reacties</data>
-                </li>
-                <li>
-                    <a href="#">Beste budget telefoon van 2026</a>
-                    <data value="612">612 reacties</data>
-                </li>
-                <li>
-                    <a href="#">Glasvezel vs kabel - Wat kies jij?</a>
-                </li>
-                <li>
-                    <a href="#">Zelfbouw pc onderdelen</a>
-                </li>
-                <li>
-                    <a href="#">Linux op de desktop</a>
-                </li>
-            </ol>
-        </article>
-        <article class="activiteit">
-            <h2> Activiteit</h2>
-            <p>Posts * 7dagen</p>
-
-        </article>
-        <article class="meldingen">
-            <h2>Meldingen open</h2>
-            <p>47</p>
-
-        </article>
-        <article class="nieuweleden">
-            <h2>Nieuwe leden(24u)</h2>
-            <p>63</p>
-        </article>
-    </main>
-
-
+      <section class="activiteit card">
+        <h2>Activiteit</h2>
+        <p>Posts * 7dagen</p>
+      </section>
+      <section class="meldingen card-small">
+        <h2>Meldingen open</h2>
+        <p>47</p>
+      </section>
+      <section class="nieuweleden card-small">
+        <h2>Nieuwe leden(24u)</h2>
+        <p>63</p>
+      </section>
+    </div>
+  </main>
 </body>
