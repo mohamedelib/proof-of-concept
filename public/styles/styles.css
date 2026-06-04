@@ -1,4 +1,5 @@
 body{
+body {
   background-color: var(--grey-95);
 }
 
@@ -13,7 +14,9 @@ body{
     background: none;
     border: none;
     cursor: pointer;
+    filter: brightness(0) invert(1);
   }
+}
 
   nav[popover] {
     inset: 0 0 0 auto;
@@ -23,136 +26,125 @@ body{
     background-color: var(--color-brand);
     color: white;
     border: none;
-    padding: 70px 0 30px 2vw;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 3px;
+    right: 15px;
 
-    button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 2rem;
-      color: white;
-      padding: 10px;
-      position: absolute;
-      top: 3px;
-      right: 15px;
+    &:hover {
+      color: var(--color-logo);
+    }
+  }
 
-      &:hover {
-        color: var(--color-logo);
-      }
+  a {
+    display: block;
+    padding: 20px;
+    font-size: 1.25rem;
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 30px;
+
+    &:hover {
+      color: var(--color-logo);
     }
 
-    a {
-      display: block;
-      padding: 20px;
-      font-size: 1.25rem;
-      color: inherit;
-      text-decoration: none;
-      margin-bottom: 30px;
-
-      &:hover {
-        color: var(--color-logo);
-      }
-
-      &:focus-visible {
-        outline: 2px solid var(--color-logo);
-      }
+    &:focus-visible {
+      outline: 2px solid var(--color-logo);
     }
   }
 }
 
-
 /* einde header */
 
-
-main h1{
+main h1 {
   padding: 0.5em 1em;
 }
 
-
 /* Dashboard */
 
-.maincontainer{
-padding: 1em;
-display: grid;
-gap: 1em;
+.maincontainer {
+  padding: 1em;
+  display: grid;
+  gap: 1em;
 
-grid-template-columns:1fr;
-	grid-template-rows:repeat(7, 1fr);
-	grid-template-areas:
-		"active-topics"
-		"top-gebruikers"
-		"nieuwe-posts"
-		"active-cats"
-		"activiteit"
-		"meldingen"
-		"nieuweleden";
-	
-	@media (width > 40em) {
-		grid-template-columns:5fr 3fr 3fr;
-		grid-template-rows:2fr 1fr 1fr;
-		grid-template-areas:
-			"active-topics top-gebruikers nieuwe-posts"
-			"active-cats activiteit meldingen"
-			"active-cats activiteit nieuweleden"
-	}
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas:
+    "active-topics"
+    "top-gebruikers"
+    "nieuwe-posts"
+    "active-cats"
+    "activiteit"
+    "meldingen"
+    "nieuweleden";
 
-  a{
+  @media (width > 850px) {
+    grid-template-columns: 5fr 3fr 3fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas:
+      "active-topics top-gebruikers nieuwe-posts"
+      "active-cats activiteit meldingen"
+      "active-cats activiteit nieuweleden";
+  }
+
+  a {
     font-weight: bold;
   }
 }
 
-.active-topics{
-  grid-area: active-topics ;
+.active-topics {
+  grid-area: active-topics;
 }
 
-.top-gebruikers{
-
+.top-gebruikers {
   grid-area: top-gebruikers;
+
+  table img {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+  }
 }
 
-.nieuwe-posts{
+.nieuwe-posts {
   display: flex;
   flex-direction: column;
   gap: 2em;
 
-
   grid-area: nieuwe-posts;
 
-
-  p{
+  p {
     margin: 0;
     font-size: 70px;
   }
-
-
 }
 
-.active-cats{
+.active-cats {
   grid-area: active-cats;
 }
 
-.activiteit{
+.activiteit {
   grid-area: activiteit;
 }
 
-.nieuweleden{
+.nieuweleden {
   grid-area: nieuweleden;
 }
 
 section {
-
-	padding:1em;
+  padding: 1em;
 }
 
-table{
+table {
   width: 100%;
-  @media (min-width: 941px){
-  }
 }
 
-td{
+td {
   border-bottom: 1px solid var(--grey-85);
-  padding: 10px
+  padding: 10px;
 }
 
 td.number {
@@ -161,17 +153,15 @@ td.number {
   font-weight: bold;
 }
 
-
 td:nth-of-type(1) {
-  width:24px;
-border-bottom: none;
-color: var(--grey-55);
+  width: 24px;
+  border-bottom: none;
+  color: var(--grey-55);
 }
 
 td:nth-of-type(3) {
-  width:5ch;
+  width: 5ch;
   border-bottom: none;
-  
 }
 
 .card {
