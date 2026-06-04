@@ -26,6 +26,11 @@ app.use(express.urlencoded({ extended: true }));
 // GET routes:
 // GET routes:
 app.get("/", async function (request, response) {
+  const gebruikersResponse = await fetch(
+    "https://fdnd-agency.directus.app/items/tweakers_users?sort=-number_of_posts&limit=5",
+  );
+  const gebruikersData = await gebruikersResponse.json();
+
   const categorieen = [7, 4, 127, 100, 32, 9, 41];
 
   const teksten = await Promise.all(
@@ -43,6 +48,7 @@ app.get("/", async function (request, response) {
 
   for (const xml of teksten) {
     const { feed } = parseFeed(xml);
+    console.log(feed.items[0]);
 
     let totaalReacties = 0;
     for (const item of feed.items) {
@@ -73,6 +79,7 @@ app.get("/", async function (request, response) {
   response.render("index.liquid", {
     items: items.slice(0, 5),
     categorieen: categorieStats.slice(0, 5),
+    users: gebruikersData.data,
   });
 });
 
