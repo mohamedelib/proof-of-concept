@@ -77,6 +77,7 @@ body {
     height: 8px;
     background: var(--color-brand);
     border-radius: 50%;
+    animation: pulsate 1s ease-out infinite;
   }
 }
 
@@ -252,4 +253,19 @@ td:nth-of-type(3) {
   border-left: 4px solid var(--color-brand);
   border-radius: 12px;
   padding: 24px;
+}
+
+/* KEYFRAMES */
+@keyframes pulsate {
+  0% {
+    transform: translate(-0%, -0%) scale(0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-0%, -0%) scale(1.2);
+    opacity: 0;
+  }
 }
