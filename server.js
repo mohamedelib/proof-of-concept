@@ -23,7 +23,13 @@ app.set("views", "./views");
 // Zorg dat werken met request data makkelijker wordt
 app.use(express.urlencoded({ extended: true }));
 
-// GET routes:
+app.get("/login", async function (request, response) {
+  // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
+
+
+
+  response.render("index.liquid", { person: personData, custom: customData });
+});
 // GET routes:
 app.get("/", async function (request, response) {
   const gebruikersResponse = await fetch(
