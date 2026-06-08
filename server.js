@@ -28,7 +28,7 @@ app.get("/login", async function (request, response) {
 
 
 
-  response.render("index.liquid", { person: personData, custom: customData });
+  response.render("login.liquid")
 });
 // GET routes:
 app.get("/", async function (request, response) {
