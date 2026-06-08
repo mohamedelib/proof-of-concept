@@ -5,10 +5,17 @@
   <header class="upperheader">
     <picture>
       {% comment %}
-      <source srcset="/assets/tweakers.avif" type="image/avif">
-      <source srcset="/assets/tweakers.webp" type="image/webp"> {% endcomment %}
-      <img class="logo" src="/assets/logo-white.png" width="{{ 190 }}" height="{{ 50 }}" alt=" Tweakers"
-        fetchpriority="high">
+        <source srcset="/assets/tweakers.avif" type="image/avif">
+        <source srcset="/assets/tweakers.webp" type="image/webp">
+      {% endcomment %}
+      <img
+        class="logo"
+        src="/assets/logo-white.png"
+        width="{{ 190 }}"
+        height="{{ 50 }}"
+        alt=" Tweakers"
+        fetchpriority="high"
+      >
     </picture>
 
     <nav class="desktop-nav">
@@ -20,16 +27,16 @@
       </ol>
     </nav>
 
-    <div class="live-sectie">
+    <p class="live-sectie">
       <span class="live-stip"></span>
       live · /rss feed
-    </div>
+    </p>
 
     <button class="hamburger" popovertarget="hamburger">
       <img src="/assets/burger-menu.svg" width="50" height="40" alt="menu">
     </button>
     <nav id="hamburger" popover>
-      <button type="button" popovertarget="hamburger" aria-label="menu sluiten">✕</button>
+      <button type="button" popovertarget="hamburger">✕</button>
       <ol>
         <li><a href="#">Overzicht</a></li>
         <li><a href="#">Topics</a></li>
@@ -47,11 +54,13 @@
         <h2>Meest actieve topics</h2>
         <table>
           {% for item in items %}
-          <tr>
-            <td>{{ forloop.index }}</td>
-            <td><a href="{{ item.link }}">{{ item.title }}</a></td>
-            <td class="number">{{ item.replies }}</td>
-          </tr>
+            <tr>
+              <td>{{ forloop.index }}</td>
+              <td>
+                <a href="{{ item.link }}">{{ item.title }}</a>
+              </td>
+              <td class="number">{{ item.replies }}</td>
+            </tr>
           {% endfor %}
         </table>
       </section>
@@ -60,14 +69,19 @@
           <h2>Top gebruikers</h2>
         </span>
         {% for user in users %}
-        <table>
-          <tr>
-            <td><img src="https://tweakers.net/identicon/{{ user.forum_id }}" width="
-            16" height="16"></td>
-            <td>{{ user.username }}</td>
-            <td class="number">{{ user.number_of_posts }}</td>
-          </tr>
-        </table>
+          <table>
+            <tr>
+              <td>
+                <img
+                  src="https://tweakers.net/identicon/{{ user.forum_id }}"
+                  width="            16"
+                  height="16"
+                >
+              </td>
+              <td>{{ user.username }}</td>
+              <td class="number">{{ user.number_of_posts }}</td>
+            </tr>
+          </table>
         {% endfor %}
       </section>
       <section class="nieuwe-posts card">
@@ -79,11 +93,13 @@
         <h2>Most actieve categorieën</h2>
         <table>
           {% for categorie in categorieen %}
-          <tr>
-            <td>{{ forloop.index }}</td>
-            <td><a href="{{ categorie.link }}">{{ categorie.naam }} </a></td>
-            <td class="number">{{ categorie.totaalReacties }}</td>
-          </tr>
+            <tr>
+              <td>{{ forloop.index }}</td>
+              <td>
+                <a href="{{ categorie.link }}">{{ categorie.naam }} </a>
+              </td>
+              <td class="number">{{ categorie.totaalReacties }}</td>
+            </tr>
           {% endfor %}
         </table>
       </section>
