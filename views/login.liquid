@@ -1,7 +1,24 @@
 {% render 'partials/head.liquid', title: 'Login' %}
-<h1>Welcome terug!</h1>
-<p>Gelieve uw gegevens hieronder in te vullen.</p>
 
+<header class="upperheader">
+  <picture>
+    <source srcset="/assets/logo-white.avif" type="image/avif">
+    <source srcset="/assets/logo-white.webp" type="image/webp">
+    <img
+      class="logo"
+      src="/assets/logo-white.png"
+      width="{{ 190 }}"
+      height="{{ 50 }}"
+      alt=" Tweakers"
+      fetchpriority="high"
+    >
+  </picture>
+</header>
+
+<div class="welcometext">
+  <h1>Welkom terug!</h1>
+  <p>Gelieve uw gegevens hieronder in te vullen.</p>
+</div>
 <form method="get" class="login-form">
   <div class="name-login">
     <label for="name">Enter your name: </label>
