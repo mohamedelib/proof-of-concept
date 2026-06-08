@@ -43,7 +43,7 @@ body {
       padding: 0;
     }
     a {
-      color: rgba(255, 255, 255, 0.75);
+      color: var(--grey-85);
       text-decoration: none;
       font-size: 0.95rem;
       padding: 0.3em 0;
@@ -57,7 +57,7 @@ body {
   }
 }
 
-.live-sectie {
+.live-section {
   display: none;
 
   @media (width > 850px) {
@@ -173,7 +173,7 @@ main h1 {
   grid-area: active-topics;
 }
 
-.top-gebruikers {
+.top-users {
   grid-area: top-gebruikers;
 
   table img {
@@ -183,7 +183,7 @@ main h1 {
   }
 }
 
-.nieuwe-posts {
+.new-posts {
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -200,11 +200,11 @@ main h1 {
   grid-area: active-cats;
 }
 
-.activiteit {
+.activity {
   grid-area: activiteit;
 }
 
-.nieuweleden {
+.new-users {
   grid-area: nieuweleden;
 }
 
