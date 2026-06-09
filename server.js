@@ -23,15 +23,18 @@ app.set("views", "./views");
 // Zorg dat werken met request data makkelijker wordt
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/", async function (request, response) {
+  // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
+response.redirect(303, "/login");
+});
 app.get("/login", async function (request, response) {
   // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-
-
-
   response.render("login.liquid")
 });
 // GET routes:
-app.get("/", async function (request, response) {
+app.get("/dashboard", async function (request, response) {
+  const name = request.query.name
+
   const gebruikersResponse = await fetch(
     "https://fdnd-agency.directus.app/items/tweakers_users?sort=-number_of_posts&limit=5",
   );
@@ -54,7 +57,7 @@ app.get("/", async function (request, response) {
 
   for (const xml of teksten) {
     const { feed } = parseFeed(xml);
-    console.log(feed.items[0]);
+    // console.log(feed.items[0]);
 
     let totaalReacties = 0;
     for (const item of feed.items) {
@@ -82,16 +85,23 @@ app.get("/", async function (request, response) {
     return b.totaalReacties - a.totaalReacties;
   });
 
-  response.render("index.liquid", {
+  response.render("dashboard.liquid", {
     items: items.slice(0, 5),
     categorieen: categorieStats.slice(0, 5),
     users: gebruikersData.data,
+    name: name ? name : ''
   });
 });
 
 // POST routes: /
 app.post("/", async function (request, response) {
   response.redirect(303, "/");
+});
+
+app.post("/login", async function (request, response) {
+  const name = request.body.name
+
+  response.redirect(303, "/dashboard?name="+name);
 });
 
 // Start de server
