@@ -256,22 +256,6 @@ td:nth-of-type(3) {
   padding: 24px;
 }
 
-/* KEYFRAMES */
-@keyframes pulsate {
-  0% {
-    transform: translate(-0%, -0%) scale(0.1);
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate(-0%, -0%) scale(1.2);
-    opacity: 0;
-  }
-}
 
 
 /* Login form */
@@ -398,4 +382,59 @@ td:nth-of-type(3) {
 
 .login {
   padding: 2rem;
+}
+
+.login-hero p {
+  animation: fadeIn 0.5s ease both;
+}
+
+.login-hero p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.login-hero p:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.login-hero p:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.login-hero p:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.login-hero p:nth-child(6) {
+  animation-delay: 1s;
+}
+
+
+
+
+/* KEYFRAMES */
+@keyframes pulsate {
+  0% {
+    transform: translate(-0%, -0%) scale(0.1);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-0%, -0%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
