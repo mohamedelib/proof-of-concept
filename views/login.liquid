@@ -1,4 +1,4 @@
-{% render 'partials/head.liquid', title: 'Login' %}
+{% render 'partials/head.liquid', title: 'Login', class: 'logintemplate' %}
 
 <header class="upperheader">
   <picture>
@@ -16,32 +16,37 @@
 </header>
 <main class="loginpage">
   <aside class="login-hero">
-    <h2>Tweakers Dashboard</h2>
-    <p>Beheer je community op één plek.</p>
-     <p>bla bla bla bla bla bla bla bla bla bla</p>
+    <div>
+      <h2>Tweakers Dashboard</h2>
+      <p>Beheer je community op één plek.</p>
+      <p>bla bla bla bla bla bla bla bla bla bla</p>
       <p>bla bla bla bla bla bla bla bla</p>
-       <p>bla bla bla bla bla bla </p>
-        <p>bla bla bla bla bla </p>
+      <p>bla bla bla bla bla bla </p>
+      <p>bla bla bla bla bla </p>
+    </div>
   </aside>
   <section class="login">
-  <section class="welcometext">
-    <h1>Welkom terug!</h1>
-    <p>Gelieve uw gegevens hieronder in te vullen.</p>
+    <div>
+      <section class="welcometext">
+        <h1>Welkom terug!</h1>
+        <p>Gelieve uw gegevens hieronder in te vullen.</p>
+      </section>
+      <form action="" method="POST" class="login-form">
+        <p class="name-login">
+          <label for="name">Gebruikersnaam</label>
+          <input type="text" name="name" id="name" required>
+        </p>
+        <div class="password-login">
+          <label for="password">Wachtwoord</label>
+          <input type="password" name="password" id="password" required>
+        </div>
+        <div class="form-example ">
+          <input type="submit" value="Inloggen">
+        </div>
+      </form>
+    </div>
   </section>
-  <form action="" method="POST" class="login-form">
-    <p class="name-login">
-      <label for="name">Gebruikersnaam</label>
-      <input type="text" name="name" id="name" required>
-    </p>
-    <div class="password-login">
-      <label for="password">Wachtwoord</label>
-      <input type="password" name="password" id="password" required>
-    </div>
-    <div class="form-example ">
-      <input type="submit" value="Inloggen">
-    </div>
-    </section>
-  </form>
+    
 </main>
 </body>
 
