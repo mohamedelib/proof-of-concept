@@ -38,7 +38,7 @@ body {
     display: flex;
     margin-left: 5em;
 
-    ol {
+    ul {
       display: flex;
       gap: 1.5em;
       list-style: none;
