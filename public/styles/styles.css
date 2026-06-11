@@ -317,6 +317,14 @@ td:nth-of-type(3) {
 
 
 .welcometext {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
-  padding: 1rem;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+  }
+}
+
 }
