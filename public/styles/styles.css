@@ -290,11 +290,9 @@ td:nth-of-type(3) {
 }
 
 .login-form {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+  display: grid;
+  justify-content: center;
   gap: 1em;
-  max-width: 280px;
 
   input {
     width: 100%;
