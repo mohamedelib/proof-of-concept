@@ -275,6 +275,14 @@ td:nth-of-type(3) {
 
 
 /* Login form */
+
+.logintemplate {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+
+}
+
 .name-login,
 .password-login {
   display: flex;
