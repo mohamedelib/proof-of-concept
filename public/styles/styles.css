@@ -327,4 +327,75 @@ td:nth-of-type(3) {
   }
 }
 
+.loginpage {
+
+  @media (min-width: 900px) {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr max-content 1fr;
+
+  }
+
+
+
+
+}
+
+
+
+.login-hero,
+.login {
+  grid-row: 1/4;
+
+  display: grid;
+
+
+  @supports (grid-template-rows: subgrid) {
+    grid-template-rows: subgrid;
+  }
+
+
+  >div {
+    grid-row-start: 2;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+
+.login-hero {
+
+
+  div {
+    display: none;
+  }
+
+  @media (min-width: 900px) {
+    background-color: var(--color-brand);
+    color: white;
+    padding: 2rem;
+
+    div {
+      display: grid;
+    }
+
+
+    p {
+      display: flex;
+      gap: 0.5em;
+      align-items: center;
+    }
+
+    i {
+      color: var(--color-logo);
+      font-size: 1.1rem;
+    }
+  }
+
+}
+
+.login {
+  padding: 2rem;
 }
