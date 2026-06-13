@@ -146,6 +146,10 @@ nav[popover] {
 
 /* Dashboard */
 
+.dashboard h1 {
+  padding: 0.5em;
+  margin-left: 0.5em;
+}
 .maincontainer {
   padding: 1em;
   display: grid;
