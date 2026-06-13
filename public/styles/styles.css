@@ -139,8 +139,6 @@ nav[popover] {
 /* einde hamburger menu  */
 /* einde header */
 
-
-
 /* Dashboard */
 
 .maincontainer {
@@ -212,7 +210,6 @@ nav[popover] {
   grid-area: nieuweleden;
 }
 
-
 table {
   width: 100%;
 }
@@ -256,15 +253,12 @@ td:nth-of-type(3) {
   padding: 24px;
 }
 
-
-
 /* Login form */
 
 .logintemplate {
   height: 100dvh;
   display: flex;
   flex-direction: column;
-
 }
 
 .name-login,
@@ -290,15 +284,7 @@ td:nth-of-type(3) {
       width: 420px;
     }
   }
-
-
-  input[type="submit"] {
-    background: none;
-    background-color: var(--color-brand);
-    color: white;
-  }
 }
-
 
 .welcometext {
   display: flex;
@@ -312,21 +298,13 @@ td:nth-of-type(3) {
 }
 
 .loginpage {
-
   @media (min-width: 900px) {
     flex-grow: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr max-content 1fr;
-
   }
-
-
-
-
 }
-
-
 
 .login-hero,
 .login {
@@ -334,13 +312,11 @@ td:nth-of-type(3) {
 
   display: grid;
 
-
   @supports (grid-template-rows: subgrid) {
     grid-template-rows: subgrid;
   }
 
-
-  >div {
+  > div {
     grid-row-start: 2;
     padding: 2rem;
     display: flex;
@@ -350,8 +326,6 @@ td:nth-of-type(3) {
 }
 
 .login-hero {
-
-
   div {
     display: none;
   }
@@ -365,7 +339,6 @@ td:nth-of-type(3) {
       display: grid;
     }
 
-
     p {
       display: flex;
       gap: 0.5em;
@@ -377,7 +350,6 @@ td:nth-of-type(3) {
       font-size: 1.1rem;
     }
   }
-
 }
 
 .login {
@@ -408,9 +380,6 @@ td:nth-of-type(3) {
   animation-delay: 1s;
 }
 
-
-
-
 /* KEYFRAMES */
 @keyframes pulsate {
   0% {
@@ -427,7 +396,6 @@ td:nth-of-type(3) {
     opacity: 0;
   }
 }
-
 
 @keyframes fadeIn {
   from {

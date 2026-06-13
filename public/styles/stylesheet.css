@@ -58,9 +58,8 @@
   li,
   a {
     list-style: none;
-  text-decoration: none;
-  color: inherit;
-
+    text-decoration: none;
+    color: inherit;
   }
 
   /*  Radius + beweging */
@@ -131,4 +130,23 @@
 }
 .btn-link:hover {
   text-decoration: none;
+}
+
+input {
+  &:focus-visible {
+    box-shadow: 0 0 0 5px var(--color-logo);
+  }
+}
+input[type="submit"] {
+  background: none;
+  background-color: var(--color-brand);
+  color: white;
+
+  &:hover {
+    background: var(--color-logo);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
 }
