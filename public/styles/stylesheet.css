@@ -141,6 +141,7 @@ input[type="submit"] {
   background: none;
   background-color: var(--color-brand);
   color: white;
+  cursor: pointer;
 
   &:hover {
     background: var(--color-logo);
