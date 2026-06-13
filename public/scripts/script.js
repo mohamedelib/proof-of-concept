@@ -1,3 +1,5 @@
+document.querySelector(".login-hero").classList.add("animated");
+
 document.querySelector(".login-form").addEventListener("submit", function () {
   const input = this.querySelector('input[type="submit"]');
   input.disabled = true;
