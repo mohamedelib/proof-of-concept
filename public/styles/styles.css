@@ -389,6 +389,14 @@ input[type="submit"]:disabled {
     color 200ms ease;
 }
 
+input:user-valid {
+  background: #d9fad9;
+}
+
+input:user-invalid {
+  background: #ffaeb6;
+}
+
 /* KEYFRAMES */
 @keyframes pulsate {
   0% {
