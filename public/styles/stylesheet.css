@@ -60,6 +60,10 @@
     list-style: none;
     text-decoration: none;
     color: inherit;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 5px var(--color-logo);
+    }
   }
 
   /*  Radius + beweging */
