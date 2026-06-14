@@ -405,6 +405,25 @@ input:user-invalid {
   background: #ffaeb6;
 }
 
+/* Gebruikers */
+
+main.gebruikers {
+  padding: 1rem;
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .top-user {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 0.5em;
+  }
+}
+
 /* KEYFRAMES */
 @keyframes pulsate {
   0% {

@@ -136,6 +136,7 @@
   text-decoration: none;
 }
 
+/* Inputs */
 input {
   &:focus-visible {
     box-shadow: 0 0 0 5px var(--color-logo);
@@ -154,4 +155,13 @@ input[type="submit"] {
   &:active {
     transform: scale(0.98);
   }
+}
+
+input[type="search"] {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--grey-85);
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.9rem;
 }
