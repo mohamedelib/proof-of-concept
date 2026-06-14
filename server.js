@@ -25,15 +25,28 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/", async function (request, response) {
   // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-response.redirect(303, "/login");
+  response.redirect(303, "/login");
 });
+
+// GET routes:
+
 app.get("/login", async function (request, response) {
   // Render index.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
-  response.render("login.liquid")
+  response.render("login.liquid");
 });
-// GET routes:
+
+app.get("/gebruikers", async function (request, response) {
+  const gebruikersResponse = await fetch(
+    "https://fdnd-agency.directus.app/items/tweakers_users?sort=-number_of_posts&limit=5",
+  );
+  const gebruikersData = await gebruikersResponse.json();
+  response.render("gebruikers.liquid", {
+    users: gebruikersData.data,
+  });
+});
+
 app.get("/dashboard", async function (request, response) {
-  const name = request.query.name
+  const name = request.query.name;
 
   const gebruikersResponse = await fetch(
     "https://fdnd-agency.directus.app/items/tweakers_users?sort=-number_of_posts&limit=5",
@@ -89,7 +102,7 @@ app.get("/dashboard", async function (request, response) {
     items: items.slice(0, 5),
     categorieen: categorieStats.slice(0, 5),
     users: gebruikersData.data,
-    name: name ? name : ''
+    name: name ? name : "",
   });
 });
 
@@ -99,9 +112,9 @@ app.post("/", async function (request, response) {
 });
 
 app.post("/login", async function (request, response) {
-  const name = request.body.name
+  const name = request.body.name;
 
-  response.redirect(303, "/dashboard?name="+name);
+  response.redirect(303, "/dashboard?name=" + name);
 });
 
 // Start de server
