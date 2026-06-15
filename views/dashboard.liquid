@@ -1,40 +1,7 @@
 {% render 'partials/head.liquid', title: 'Dashboard' %}
 
 
-{% comment %} header {% endcomment %}
-<header class="upperheader">
-  <picture>
-    <source srcset="/assets/logo-white.avif" type="image/avif">
-    <img class="logo" src="/assets/logo-white.png" width="190" height="50" alt="Tweakers" fetchpriority="high">
-  </picture>
-
-  <nav class="desktop-nav">
-    <ul>
-      <a href="#" class="active">Dashboard</a></li>
-      <li><a href="#">Topics</a></li>
-      <li><a href="#">Gebruikers</a></li>
-      <li><a href="#">Meldingen</a></li>
-    </ul>
-  </nav>
-
-  <p class="live-section">
-    <span class="live-dot"></span>
-    Status: Live
-  </p>
-
-  <button class="hamburger" popovertarget="hamburger">
-    <img src="/assets/burger-menu.svg" width="50" height="40" alt="menu">
-  </button>
-  <nav id="hamburger" popover>
-    <button type="button" popovertarget="hamburger" aria-label="Sluit menu">✕</button>
-    <ol>
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Topics</a></li>
-      <li><a href="#">Gebruikers</a></li>
-      <li><a href="#">Meldingen</a></li>
-    </ol>
-  </nav>
-</header>
+{% render 'partials/header.liquid' %}
 
 {% comment %} einde header {% endcomment %}
 <main class="dashboard">
