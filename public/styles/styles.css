@@ -423,6 +423,23 @@ main.gebruikers {
     gap: 0.5em;
     margin-top: 0.5em;
   }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em
+  }
+
+  @media (min-width: 700px) {
+    .wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .wrapper>.card {
+      width: stretch;
+    }
+  }
 }
 
 /* KEYFRAMES */
