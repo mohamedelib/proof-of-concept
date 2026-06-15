@@ -37,7 +37,7 @@ app.get("/login", async function (request, response) {
 
 app.get("/gebruikers", async function (request, response) {
   const gebruikersResponse = await fetch(
-    "https://fdnd-agency.directus.app/items/tweakers_users?sort=-number_of_posts&limit=5",
+    "https://fdnd-agency.directus.app/items/tweakers_users?sort=-number_of_posts",
   );
   const gebruikersData = await gebruikersResponse.json();
   response.render("gebruikers.liquid", {
