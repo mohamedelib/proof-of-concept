@@ -16,7 +16,15 @@
           >Dashboard</a
         >
       </li>
-      <li><a href="#">Topics</a></li>
+      <li>
+        <a
+          href="topics"
+          {% if activePage == 'topics' %}
+            class="active"
+          {% endif %}
+          >Topics</a
+        >
+      </li>
       <li>
         <a
           href="gebruikers"
