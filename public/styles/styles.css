@@ -149,6 +149,7 @@ nav[popover] {
   padding: 0.5em;
   margin-left: 0.5em;
 }
+
 .maincontainer {
   padding: 1em;
   display: grid;
@@ -324,7 +325,7 @@ td:nth-of-type(3) {
     grid-template-rows: subgrid;
   }
 
-  > div {
+  >div {
     grid-row-start: 2;
     padding: 2rem;
     display: flex;
