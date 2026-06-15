@@ -442,6 +442,12 @@ main.gebruikers {
   }
 }
 
+/* Topics page */
+
+.topics {
+  padding: 1rem;
+}
+
 /* KEYFRAMES */
 @keyframes pulsate {
   0% {
