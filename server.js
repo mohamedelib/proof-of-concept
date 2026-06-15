@@ -43,7 +43,7 @@ app.get("/gebruikers", async function (request, response) {
   )
 
   const gebruikersData = await gebruikersResponse.json();
-  
+
   const users = zoek
     ? gebruikersData.data.filter(u =>
         u.username.toLowerCase().includes(zoek)
@@ -54,6 +54,7 @@ app.get("/gebruikers", async function (request, response) {
   response.render("gebruikers.liquid", {
     users,
     zoek,
+    activePage: "gebruikers"
   });
 });
 app.get("/dashboard", async function (request, response) {
@@ -114,6 +115,7 @@ app.get("/dashboard", async function (request, response) {
     categorieen: categorieStats.slice(0, 5),
     users: gebruikersData.data,
     name: name ? name : "",
+    activePage: "dashboard",
   });
 });
 

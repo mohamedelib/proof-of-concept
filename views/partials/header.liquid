@@ -7,9 +7,25 @@
 
   <nav class="desktop-nav">
     <ul>
-      <a href="#" class="active">Dashboard</a></li>
+      <li>
+        <a
+          href="dashboard"
+          {% if activePage == 'dashboard' %}
+            class="active"
+          {% endif %}
+          >Dashboard</a
+        >
+      </li>
       <li><a href="#">Topics</a></li>
-      <li><a href="gebruikers">Gebruikers</a></li>
+      <li>
+        <a
+          href="gebruikers"
+          {% if activePage == 'gebruikers' %}
+            class="active"
+          {% endif %}
+          >Gebruikers</a
+        >
+      </li>
       <li><a href="#">Meldingen</a></li>
     </ul>
   </nav>
@@ -25,9 +41,9 @@
   <nav id="hamburger" popover>
     <button type="button" popovertarget="hamburger" aria-label="Sluit menu">✕</button>
     <ol>
-      <li><a href="#">Dashboard</a></li>
+      <li><a href="dashboard">Dashboard</a></li>
       <li><a href="#">Topics</a></li>
-      <li><a href="#">Gebruikers</a></li>
+      <li><a href="gebruikers">Gebruikers</a></li>
       <li><a href="#">Meldingen</a></li>
     </ol>
   </nav>

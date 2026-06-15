@@ -1,7 +1,7 @@
 {% render 'partials/head.liquid', title: 'Dashboard' %}
 
 
-{% render 'partials/header.liquid' %}
+{% render 'partials/header.liquid', activePage: activePage %}
 
 {% comment %} einde header {% endcomment %}
 <main class="dashboard">
@@ -24,7 +24,7 @@
     <section class="top-users card">
 
       <h2>Top gebruikers</h2>
-
+<p>{{ activePage }}</p>
       {% for user in users %}
       <table>
         <tr>
