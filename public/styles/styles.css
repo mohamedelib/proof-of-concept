@@ -98,6 +98,7 @@ body {
 }
 
 /* Hamburger menu */
+/* newly-available */
 nav[popover] {
   inset: 0 0 0 auto;
   margin: 0;
