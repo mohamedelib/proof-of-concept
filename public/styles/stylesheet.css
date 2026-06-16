@@ -95,6 +95,7 @@ a {
 
   &:focus-visible {
     box-shadow: 0 0 0 5px var(--color-logo);
+    outline: none;
   }
 }
 /* KNOPPEN */
