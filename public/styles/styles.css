@@ -236,7 +236,7 @@ td {
 
 td.number {
   text-align: right;
-  color: var(--color-brand);
+  color: var(--tdnumber);
   font-weight: bold;
 }
 
