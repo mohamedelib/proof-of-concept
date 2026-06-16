@@ -94,7 +94,13 @@ a {
   color: var(--text);
 
   &:focus-visible {
-    box-shadow: 0 0 0 5px var(--color-logo);
+    box-shadow: 0 0 0 4px var(--color-logo);
+    outline: none;
+    border-radius: 12px;
+    padding: 1px;
+  }
+}
+
     outline: none;
   }
 }
