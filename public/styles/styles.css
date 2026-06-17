@@ -47,7 +47,7 @@ body {
     }
 
     a {
-      color: var(--grey-85);
+      color: var(--white);
       text-decoration: none;
       font-size: 0.95rem;
 
@@ -329,7 +329,7 @@ td:nth-of-type(3) {
     grid-template-rows: subgrid;
   }
 
-  > div {
+  >div {
     grid-row-start: 2;
     padding: 2rem;
     display: flex;
@@ -406,6 +406,7 @@ input[type="submit"]:disabled {
 input:user-valid {
   background: #d9fad9;
 }
+
 /* newly-available */
 input:user-invalid {
   background: #ffaeb6;
@@ -441,7 +442,7 @@ main.gebruikers {
       justify-content: space-between;
     }
 
-    .wrapper > .card {
+    .wrapper>.card {
       width: stretch;
     }
   }
@@ -450,7 +451,9 @@ main.gebruikers {
 /* Topics page */
 
 .topics {
+  margin: 0 auto;
   padding: 1rem;
+  max-width: 50em;
 
 
   .wrapper {
