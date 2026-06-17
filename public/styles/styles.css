@@ -428,6 +428,8 @@ main.gebruikers {
     flex-direction: column;
     gap: 0.5em;
     margin-top: 0.5em;
+
+
   }
 
   .wrapper {
@@ -447,6 +449,18 @@ main.gebruikers {
     }
   }
 }
+
+.scrollcontainer {
+  /* newly available */
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  /* newly available */
+  scrollbar-color: var(--color-brand) transparent;
+  /* newly available */
+
+}
+
 
 /* Topics page */
 
