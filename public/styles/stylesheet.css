@@ -1,7 +1,6 @@
 /*=========================================================
     Tweakers Community Dashboard
   ========================================================= */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -26,50 +25,34 @@
   --grey-15: #22262a;
   --grey-05: #0b0d0e;
   --white: #ffffff;
+  --card-color: #ffffff;
+  --background-dark: #0b0d0e;
+  --card-dark: #15191c;
+  --border-dark: #2c3236;
+  --text: black;
+  --tdnumber: #9f102f;
 
   /* TYPOGRafie */
   --font-heading: "IBM Plex Sans Condensed", sans-serif;
   --font-body: Arial, Helvetica, sans-serif;
-
-  body {
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.4;
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-  h2 {
-    font-size: 24px;
-  }
-  h3 {
-    font-size: 18px;
-  }
-
-  li,
-  a {
-    list-style: none;
-    text-decoration: none;
-    color: inherit;
-
-    &:focus-visible {
-      box-shadow: 0 0 0 5px var(--color-logo);
-    }
-  }
-
   /*  Radius + beweging */
   --radius-md: 8px;
   --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
   --dur: 180ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grey-95: var(--background-dark);
+    --grey-85: var(--border-dark);
+    --text: var(--white);
+    --color-brand: var(--color-logo);
+    --card-color: var(--card-dark);
+  }
+
+  .live-section {
+    background: var(--background-dark);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -77,7 +60,55 @@
     transition-duration: 0.001ms;
   }
 }
+/* TYPOGRafie */
 
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--text);
+
+  &:focus-visible {
+    box-shadow: 0 0 0 4px var(--color-logo);
+    outline: none;
+    border-radius: 12px;
+    padding: 1px;
+  }
+}
+
+table {
+  &:focus-within {
+    box-shadow: 0 0 0 4px var(--color-logo);
+    outline: none;
+    border-radius: 12px;
+    padding: 1px;
+  }
+}
 /* KNOPPEN */
 .btn {
   display: inline-flex;
