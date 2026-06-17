@@ -7,11 +7,15 @@
   list-style: none;
   box-sizing: border-box;
 }
+
 :root {
   /* --- Merkkleuren --- */
-  --color-logo: #d9e54d; /* lime  */
-  --color-brand: #a11236; /* rood  */
-  --color-accent: #004d99; /* blauw  */
+  --color-logo: #d9e54d;
+  /* lime  */
+  --color-brand: #a11236;
+  /* rood  */
+  --color-accent: #004d99;
+  /* blauw  */
 
   /* Grijstinten (licht naar donker)  */
   --grey-95: #f1f2f4;
@@ -31,6 +35,7 @@
   --border-dark: #2c3236;
   --text: black;
   --tdnumber: #9f102f;
+  --tdnumberblack: #d9e54d;
 
   /* TYPOGRafie */
   --font-heading: "IBM Plex Sans Condensed", sans-serif;
@@ -48,6 +53,7 @@
     --text: var(--white);
     --color-brand: var(--color-logo);
     --card-color: var(--card-dark);
+    --tdnumber: var(--tdnumberblack);
   }
 
   .live-section {
@@ -60,6 +66,7 @@
     transition-duration: 0.001ms;
   }
 }
+
 /* TYPOGRafie */
 
 body {
@@ -80,9 +87,11 @@ h3 {
 h1 {
   font-size: 32px;
 }
+
 h2 {
   font-size: 24px;
 }
+
 h3 {
   font-size: 18px;
 }
@@ -109,6 +118,7 @@ table {
     padding: 1px;
   }
 }
+
 /* KNOPPEN */
 .btn {
   display: inline-flex;
@@ -142,6 +152,7 @@ table {
   background: var(--color-accent);
   color: var(--white);
 }
+
 .btn-primary:hover {
   background: #003a75;
 }
@@ -152,6 +163,7 @@ table {
   color: var(--color-accent);
   border-color: var(--color-accent);
 }
+
 .btn-secondary:hover {
   background: #eef4fb;
 }
@@ -163,6 +175,7 @@ table {
   padding: 0.5rem 0.25rem;
   text-decoration: underline;
 }
+
 .btn-link:hover {
   text-decoration: none;
 }
@@ -173,6 +186,7 @@ input {
     box-shadow: 0 0 0 5px var(--color-logo);
   }
 }
+
 input[type="submit"] {
   background: none;
   background-color: var(--color-brand);
