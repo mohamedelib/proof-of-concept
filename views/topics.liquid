@@ -29,7 +29,7 @@
                 {% for item in items %}
                 <tr>
                     <td>{{ forloop.index }}</td>
-                    <td>{{ item.title }}</td>
+                    <td><a href="{{ item.link }}">{{ item.title }}</a></td>
                     <td class="number">{{ item.replies }}</td>
                 </tr>
                 {% endfor %}
