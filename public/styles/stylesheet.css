@@ -210,3 +210,13 @@ input[type="search"] {
   outline: none;
   font-size: 0.9rem;
 }
+
+a {
+  display: inline-block;
+  transform-origin: left center;
+  transition: transform 0.2s ease;
+}
+
+a:hover {
+  transform: scale(1.08);
+}
