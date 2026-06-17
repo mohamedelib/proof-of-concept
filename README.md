@@ -1,5 +1,8 @@
 # Tweakers Community Dashboard
 
+<img width="820" height="401" alt="image" src="https://github.com/user-attachments/assets/261bc0ea-6bb6-488b-9d89-bacf10fa91b3" />
+
+
 Een serverside gerenderde community dashboard voor Tweakers, gebouwd met Node.js, Express en LiquidJS. De data komt live binnen via de Directus API en RSS feeds van Tweakers.
 
 🔗 [Live site](https://proof-of-concept-qs99.onrender.com/login)
