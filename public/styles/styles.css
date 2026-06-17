@@ -459,8 +459,8 @@ main.gebruikers {
   scrollbar-color: var(--color-brand) transparent;
   /* newly available */
 
-}
 
+}
 
 /* Topics page */
 
@@ -479,6 +479,12 @@ main.gebruikers {
   section {
     margin-top: 0.5em;
   }
+
+  .card {
+    display: grid;
+    gap: 0.5em;
+  }
+
 }
 
 /* KEYFRAMES */
