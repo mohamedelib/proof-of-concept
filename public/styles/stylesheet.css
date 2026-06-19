@@ -110,6 +110,16 @@ a {
   }
 }
 
+a {
+  display: inline-block;
+  transform-origin: left center;
+  transition: transform 0.2s ease;
+}
+
+a:hover {
+  transform: scale(1.08);
+}
+
 table {
   &:focus-within {
     box-shadow: 0 0 0 4px var(--color-logo);
@@ -209,14 +219,4 @@ input[type="search"] {
   border-radius: 20px;
   outline: none;
   font-size: 0.9rem;
-}
-
-a {
-  display: inline-block;
-  transform-origin: left center;
-  transition: transform 0.2s ease;
-}
-
-a:hover {
-  transform: scale(1.08);
 }
