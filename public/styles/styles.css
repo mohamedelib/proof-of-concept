@@ -146,14 +146,7 @@ nav[popover] {
 
 /* Dashboard */
 
-.dashboard h1 {
-  padding: 0.6em 0.5em;
-  margin-left: 0.75em;
-}
 
-.dashboard h2 {
-  padding-bottom: 0.2em;
-}
 
 .maincontainer {
   padding: 1em;
@@ -223,31 +216,44 @@ nav[popover] {
   grid-area: nieuweleden;
 }
 
+
+.dashboard h1 {
+  .dashboard h1 {
+    padding: 0.6em 0.5em;
+    margin-left: 0.75em;
+  }
+
+  .dashboard h2 {
+    padding-bottom: 0.2em;
+  }
+}
+
 table {
   width: 100%;
-}
 
-td {
-  border-bottom: 1px solid var(--grey-85);
-  padding: 10px;
-  hyphens: auto;
-}
 
-td.number {
-  text-align: right;
-  color: var(--tdnumber);
-  font-weight: bold;
-}
+  td {
+    border-bottom: 1px solid var(--grey-85);
+    padding: 10px;
+    hyphens: auto;
+  }
 
-td:nth-of-type(1) {
-  width: 24px;
-  border-bottom: none;
-  color: var(--grey-55);
-}
+  td.number {
+    text-align: right;
+    color: var(--tdnumber);
+    font-weight: bold;
+  }
 
-td:nth-of-type(3) {
-  width: 5ch;
-  border-bottom: none;
+  td:nth-of-type(1) {
+    width: 24px;
+    border-bottom: none;
+    color: var(--grey-55);
+  }
+
+  td:nth-of-type(3) {
+    width: 5ch;
+    border-bottom: none;
+  }
 }
 
 .card {
@@ -365,26 +371,27 @@ td:nth-of-type(3) {
 
 .login-hero p {
   animation: fadeIn 0.5s ease both;
-}
 
-.login-hero p:nth-child(2) {
-  animation-delay: 0.2s;
-}
 
-.login-hero p:nth-child(3) {
-  animation-delay: 0.4s;
-}
+  .login-hero p:nth-child(2) {
+    animation-delay: 0.2s;
+  }
 
-.login-hero p:nth-child(4) {
-  animation-delay: 0.6s;
-}
+  .login-hero p:nth-child(3) {
+    animation-delay: 0.4s;
+  }
 
-.login-hero p:nth-child(5) {
-  animation-delay: 0.8s;
-}
+  .login-hero p:nth-child(4) {
+    animation-delay: 0.6s;
+  }
 
-.login-hero p:nth-child(6) {
-  animation-delay: 1s;
+  .login-hero p:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+
+  .login-hero p:nth-child(6) {
+    animation-delay: 1s;
+  }
 }
 
 input[type="submit"]:disabled {
