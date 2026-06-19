@@ -15,9 +15,9 @@ Het dashboard geeft een overzicht van de Tweakers community: actieve topics, top
 
 De drie onderdelen die ik in deze README presenteer zijn:
 
-- **Responsive design** — mobile first grid layout die meeschaalt naar desktop
-- **Dark mode** — automatische kleuromschakeling via `prefers-color-scheme`
-- **Progressive enhancement** — Popover navigatie en formuliervalidatie die werken zonder JavaScript
+- **Responsive design**  mobile first grid layout die meeschaalt naar desktop
+- **Dark mode** automatische kleuromschakeling via `prefers-color-scheme`
+- **Progressive enhancement**  Popover navigatie en formuliervalidatie die werken zonder JavaScript
 
 <!-- Voeg hier een screenshot of GIF van het dashboard toe -->
 <!-- ![Dashboard overzicht](./docs/screenshot-dashboard.png) -->
