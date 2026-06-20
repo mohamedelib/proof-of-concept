@@ -36,25 +36,22 @@ app.get("/login", async function (request, response) {
 });
 
 app.get("/gebruikers", async function (request, response) {
-  const zoek = request.query.zoek?.toLowerCase() || ""
+  const zoek = request.query.zoek?.toLowerCase() || ""; // pakt de zoekterm uit URL (? zorgt ervoor dat hij niet crasht)
 
   const gebruikersResponse = await fetch(
-    "https://fdnd-agency.directus.app/items/tweakers_users?sort=-number_of_posts",
-  )
+    "https://fdnd-agency.directus.app/items/tweakers_users?sort=-number_of_posts", // gebruikers ophalen
+  );
 
   const gebruikersData = await gebruikersResponse.json();
 
   const users = zoek
-    ? gebruikersData.data.filter(u =>
-        u.username.toLowerCase().includes(zoek)
-      )
-    : gebruikersData.data
+    ? gebruikersData.data.filter((u) => u.username.toLowerCase().includes(zoek))
+    : gebruikersData.data; // als er een zoekterm is filtert hij op naam, anders geeft hij alle gebruikers terug
 
-  
   response.render("gebruikers.liquid", {
     users,
     zoek,
-    activePage: "gebruikers"
+    activePage: "gebruikers",
   });
 });
 
@@ -66,9 +63,10 @@ app.get("/topics", async function (request, response) {
   );
   const gebruikersData = await gebruikersResponse.json();
 
-  const categorieen = [7, 4, 127, 100, 32, 9, 41];
+  const categorieen = [7, 4, 127, 100, 32, 9, 41]; // Lijst met categorie IDS om de juiste RSS feed op te halen
 
   const teksten = await Promise.all(
+    // Haalt alle RSS feeds tegelijk op. Promise.all wacht totdat alle fetches klaar zijn voor hij verder gaat.
     categorieen.map(function (categorie) {
       return fetch(
         "https://gathering.tweakers.net/rss/list_topics/" + categorie,
@@ -82,13 +80,14 @@ app.get("/topics", async function (request, response) {
   const categorieStats = [];
 
   for (const xml of teksten) {
+    // Loopt door elke RSS feed heen en zet de XML om naar een bruikbaar object.
     const { feed } = parseFeed(xml);
     // console.log(feed.items[0]);
 
     let totaalReacties = 0;
     for (const item of feed.items) {
       const replies = Number(
-        item.description.substring(9, item.description.indexOf("\n")),
+        item.description.substring(9, item.description.indexOf("\n")), // substring(9) slaat de eerste 9 tekens over, indexOf("\n")
       );
       items.push({ title: item.title, link: item.link, replies: replies });
       totaalReacties += replies;
