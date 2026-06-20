@@ -1,5 +1,7 @@
 {% render 'partials/head.liquid', title: 'Login', class: 'logintemplate' %}
 
+{% comment %} Login header {% endcomment %}
+
 <header class="upperheader">
   <picture>
     <source srcset="/assets/logo-white.avif" type="image/avif">
@@ -8,6 +10,9 @@
       fetchpriority="high">
   </picture>
 </header>
+
+
+{% comment %} Hero {% endcomment %}
 <main class="loginpage">
   <aside class="login-hero">
     <div>
@@ -21,6 +26,8 @@
       <p class="animated"><i class="ti ti-rss"></i>Live RSS feed</p>
     </div>
   </aside>
+
+  {% comment %} Login form {% endcomment %}
   <section class="login">
     <div>
       <section class="welcometext">

@@ -1,6 +1,8 @@
 {% render 'partials/head.liquid', title: 'Topics' %}
 {% render 'partials/header.liquid', activePage: activePage %}
 
+
+{% comment %} Bovenste kaarten {% endcomment %}
 <main class="topics">
     <section class="stats">
         <h2>Statistieken</h2>
@@ -9,6 +11,8 @@
                 <h3>Totaal topics</h3>
                 <p></p>
             </section>
+
+            {% comment %} Zoekbalk {% endcomment %}
             <section class="card">
                 <h3>Zoek topics</h3>
                 <form role="search" method="get">
@@ -18,23 +22,23 @@
             </section>
         </div>
     </section>
-
+    {% comment %} Scrollcontainer met lijst topics {% endcomment %}
     <section class="top-topics card">
         <h2>Topics</h2>
         <div class="scrollcontainer">
-        <table>
-            <caption>Lijst van topics</caption>
-          
-            <tbody>
-                {% for item in items %}
-                <tr>
-                    <td>{{ forloop.index }}</td>
-                    <td><a href="{{ item.link }}">{{ item.title }}</a></td>
-                    <td class="number">{{ item.replies }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+            <table>
+                <caption>Lijst van topics</caption>
+
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td>{{ forloop.index }}</td>
+                        <td><a href="{{ item.link }}">{{ item.title }}</a></td>
+                        <td class="number">{{ item.replies }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </section>
 </main>

@@ -4,9 +4,13 @@
 {% render 'partials/header.liquid', activePage: activePage %}
 
 {% comment %} einde header {% endcomment %}
+
+
 <main class="dashboard">
   <h1>Welkom {{ name }}</h1>
   <div class="maincontainer">
+
+    {% comment %} Actieve topics {% endcomment %}
     <section class="active-topics card">
       <h2>Meest actieve topics</h2>
       <table>
@@ -23,6 +27,7 @@
     </section>
     <section class="top-users card">
 
+      {% comment %} Top gebruikers {% endcomment %}
       <h2>Top gebruikers</h2>
       {% for user in users %}
       <table>
@@ -41,6 +46,7 @@
       <p>1284</p>
     </section>
 
+    {% comment %} Actieve categorien {% endcomment %}
     <section class="active-cats card">
       <h2>Meest actieve categorieën</h2>
       <table>
@@ -55,15 +61,19 @@
         {% endfor %}
       </table>
     </section>
-
+    {% comment %} Activityy card {% endcomment %}
     <section class="activity card">
       <h2>Activiteit</h2>
       <p>Posts * 7dagen</p>
     </section>
+
+    {% comment %} Meldingen {% endcomment %}
     <section class="messages card">
       <h2>Meldingen open</h2>
       <p>47</p>
     </section>
+
+    {% comment %} Nieuwe gebruikers {% endcomment %}
     <section class="new-users card">
       <h2>Nieuwe leden(24u)</h2>
       <p>63</p>

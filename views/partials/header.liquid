@@ -3,48 +3,33 @@
   <picture>
     <source srcset="/assets/logo-white.avif" type="image/avif">
     <a href="dashboard">
-      <img class="logo" src="/assets/logo-white.png" width="190" height="50" alt="Tweakers" fetchpriority="high"
-    ></a>
+      <img class="logo" src="/assets/logo-white.png" width="190" height="50" alt="Tweakers" fetchpriority="high"></a>
   </picture>
 
+  {% comment %} Desktop navigatie {% endcomment %}
   <nav class="desktop-nav">
     <ul>
       <li>
-        <a
-          href="dashboard"
-          {% if activePage == 'dashboard' %}
-            class="active"
-          {% endif %}
-          >Dashboard</a
-        >
+        <a href="dashboard" {% if activePage=='dashboard' %} class="active" {% endif %}>Dashboard</a>
       </li>
       <li>
-        <a
-          href="topics"
-          {% if activePage == 'topics' %}
-            class="active"
-          {% endif %}
-          >Topics</a
-        >
+        <a href="topics" {% if activePage=='topics' %} class="active" {% endif %}>Topics</a>
       </li>
       <li>
-        <a
-          href="gebruikers"
-          {% if activePage == 'gebruikers' %}
-            class="active"
-          {% endif %}
-          >Gebruikers</a
-        >
+        <a href="gebruikers" {% if activePage=='gebruikers' %} class="active" {% endif %}>Gebruikers</a>
       </li>
       <li><a href="#">Meldingen</a></li>
     </ul>
   </nav>
 
+  {% comment %} Live animation {% endcomment %}
   <p class="live-section">
     <span class="live-dot"></span>
     Status: Live
   </p>
 
+
+  {% comment %} Hamburger menu {% endcomment %}
   <button class="hamburger" popovertarget="hamburger">
     <img src="/assets/burger-menu.svg" width="50" height="40" alt="menu">
   </button>

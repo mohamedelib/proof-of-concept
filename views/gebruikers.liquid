@@ -1,47 +1,51 @@
 {% render 'partials/head.liquid', title: 'Dashboard' %}
-{% render 'partials/header.liquid'  activePage: activePage %}
+{% render 'partials/header.liquid' activePage: activePage %}
 
-
+{% comment %} Bovenste 3 cards {% endcomment %}
 <main class="gebruikers">
     <section class="stats">
         <h2>Statistieken</h2>
         <div class="wrapper">
-        <section class="card">
-            <h3>Totaal leden</h3>
-            <p>142.800</p>
-        </section>
-        <section class="card">
-            <h3>Actief vandaag</h3>
-            <p>2.341</p>
-        </section>
-        <section class="card">
-            <h3>Nieuwe leden (24u)</h3>
-            <p>63</p>
-            </div>
-        </section>
+            <section class="card">
+                <h3>Totaal leden</h3>
+                <p>142.800</p>
+            </section>
+            <section class="card">
+                <h3>Actief vandaag</h3>
+                <p>2.341</p>
+            </section>
+            <section class="card">
+                <h3>Nieuwe leden (24u)</h3>
+                <p>63</p>
+        </div>
+    </section>
     </section>
 
+    {% comment %} zoekbalk {% endcomment %}
     <section class="top-user card">
         <h2>Top gebruikers</h2>
         <form role="search" method="get">
             <label for="zoek-gebruiker"></label>
             <input type="search" id="zoek-gebruiker" name="zoek" placeholder="Zoek gebruiker...">
         </form>
+
+        {% comment %} Scroll container met gebruikers {% endcomment %}
         <div class="scrollcontainer">
-        <table>
-            <caption>Lijst van meest actieve gebruikers</caption>
-            <tbody>
-                {% for user in users %}
-                <tr>
-                    <td>
-                        <img src="https://tweakers.net/identicon/{{ user.forum_id }}" width="16" height="16" alt="" loading="lazy">
-                    </td>
-                    <td>{{ user.username }}</td>
-                    <td class="number">{{ user.number_of_posts }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+            <table>
+                <caption>Lijst van meest actieve gebruikers</caption>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>
+                            <img src="https://tweakers.net/identicon/{{ user.forum_id }}" width="16" height="16" alt=""
+                                loading="lazy">
+                        </td>
+                        <td>{{ user.username }}</td>
+                        <td class="number">{{ user.number_of_posts }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </section>
 </main>
