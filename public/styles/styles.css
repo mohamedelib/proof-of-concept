@@ -403,12 +403,12 @@ input[type="submit"]:disabled {
     color 200ms ease;
 }
 
-/* newly-available */
+
 input:user-valid {
   background: #d9fad9;
 }
 
-/* newly-available */
+
 input:user-invalid {
   background: #ffaeb6;
 }
