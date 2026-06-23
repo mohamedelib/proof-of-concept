@@ -528,4 +528,10 @@ main.gebruikers {
       font-weight: 700;
       border-bottom: 3px solid black;
     }
+
+  }
+
+  .live-section {
+    background: var(--background-dark);
+  }
 }
