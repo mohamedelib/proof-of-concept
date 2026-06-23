@@ -130,6 +130,7 @@ nav[popover] {
     padding: 20px;
     font-size: 1.25rem;
     margin-bottom: 30px;
+    color: var(--white);
 
     &:hover {
       color: var(--color-logo);
