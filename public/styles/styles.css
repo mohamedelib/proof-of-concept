@@ -218,13 +218,13 @@ nav[popover] {
 }
 
 
-.dashboard h1 {
-  .dashboard h1 {
+.dashboard {
+  h1 {
     padding: 0.6em 0.5em;
     margin-left: 0.75em;
   }
 
-  .dashboard h2 {
+  h2 {
     padding-bottom: 0.2em;
   }
 }
