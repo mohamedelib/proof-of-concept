@@ -515,3 +515,17 @@ main.gebruikers {
     opacity: 1;
   }
 }
+
+
+/* Darkmode */
+@media (prefers-color-scheme: dark) {
+
+  .desktop-nav a {
+    color: black;
+
+    &.active {
+      color: black;
+      font-weight: 700;
+      border-bottom: 3px solid black;
+    }
+}
