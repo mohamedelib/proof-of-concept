@@ -534,4 +534,15 @@ main.gebruikers {
   .live-section {
     background: var(--background-dark);
   }
+
+  .login-hero {
+    color: black;
+
+    i {
+      color: red;
+    }
+  }
+
+
+
 }
